@@ -4,7 +4,7 @@ import { Terminal, Trash2 } from 'lucide-react';
 const TransactionList = ({ transactions, deleteTransaction, formatCurrency, formatDate }) => {
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="border-2 border-green-400 p-6 bg-black">
+      <div className="border-2 border-border-color p-6 bg-bg-color">
         <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
           <Terminal className="w-5 h-5" />
           LOG TRANSAKSI
@@ -20,7 +20,7 @@ const TransactionList = ({ transactions, deleteTransaction, formatCurrency, form
             {transactions.map((trans) => (
               <div
                 key={trans.id}
-                className="border border-green-400 p-4 hover:bg-green-950 transition-colors"
+                className="border border-border-color p-4 hover:bg-hover-bg-color transition-colors"
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">

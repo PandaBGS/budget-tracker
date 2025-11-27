@@ -15,7 +15,7 @@ const TransactionForm = ({
 
   return (
     <div className="max-w-6xl mx-auto mb-8">
-      <div className="border-2 border-green-400 p-6 bg-black relative">
+      <div className="border-2 border-border-color p-6 bg-bg-color relative">
         <button
           onClick={() => setShowForm(false)}
           className="absolute top-4 right-4 hover:text-red-400 transition-colors"
@@ -38,7 +38,7 @@ const TransactionForm = ({
                 className={`flex-1 p-3 border-2 transition-colors ${
                   formData.type === 'expense'
                     ? 'border-red-400 bg-red-950 text-red-400'
-                    : 'border-green-400 hover:bg-green-950'
+                    : 'border-border-color hover:bg-hover-bg-color'
                 }`}
               >
                 PENGELUARAN
@@ -49,7 +49,7 @@ const TransactionForm = ({
                 className={`flex-1 p-3 border-2 transition-colors ${
                   formData.type === 'income'
                     ? 'border-green-300 bg-green-950 text-green-300'
-                    : 'border-green-400 hover:bg-green-950'
+                    : 'border-border-color hover:bg-hover-bg-color'
                 }`}
               >
                 PEMASUKAN
@@ -62,7 +62,7 @@ const TransactionForm = ({
             <select
               value={formData.category}
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-              className="w-full bg-black border-2 border-green-400 p-3 text-green-400 focus:outline-none focus:border-green-300"
+              className="w-full bg-bg-color border-2 border-border-color p-3 text-text-color focus:outline-none focus:border-green-300"
               required
             >
               <option value="">Pilih kategori...</option>
@@ -81,7 +81,7 @@ const TransactionForm = ({
               type="number"
               value={formData.amount}
               onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-              className="w-full bg-black border-2 border-green-400 p-3 text-green-400 focus:outline-none focus:border-green-300"
+              className="w-full bg-bg-color border-2 border-border-color p-3 text-text-color focus:outline-none focus:border-green-300"
               placeholder="Masukkan jumlah..."
               required
             />
@@ -93,14 +93,14 @@ const TransactionForm = ({
               type="text"
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-              className="w-full bg-black border-2 border-green-400 p-3 text-green-400 focus:outline-none focus:border-green-300"
+              className="w-full bg-bg-color border-2 border-border-color p-3 text-text-color focus:outline-none focus:border-green-300"
               placeholder="Masukkan deskripsi..."
             />
           </div>
 
           <button
             type="submit"
-            className="w-full border-2 border-green-400 p-4 hover:bg-green-950 transition-colors font-bold"
+            className="w-full border-2 border-border-color p-4 hover:bg-hover-bg-color transition-colors font-bold"
           >
             JALANKAN TRANSAKSI
           </button>

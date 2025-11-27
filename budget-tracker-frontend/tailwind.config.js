@@ -7,8 +7,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['Courier New', 'monospace'],
+        mono: ['"SF Mono"', 'monospace'],
       },
+      colors: {
+        'bg-color': 'var(--bg-color)',
+        'text-color': 'var(--text-color)',
+        'border-color': 'var(--border-color)',
+        'hover-bg-color': 'var(--hover-bg-color)',
+      }
     },
   },
   plugins: [],
