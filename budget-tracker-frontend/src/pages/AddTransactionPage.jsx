@@ -42,11 +42,22 @@ const AddTransactionPage = () => {
         })
       });
 
+      // --- PERUBAHAN DI SINI (Membaca respon JSON dari backend) ---
+      const data = await res.json();
+
       if (res.ok) {
+        // Jika sukses (Status 200/201)
         navigate('/history');
+      } else {
+        // Jika gagal (Status 400/500), tampilkan pesan error dari backend
+        // Backend mengirim: { success: false, message: 'Transaksi ditolak: Saldo tidak mencukupi' }
+        alert(data.message || 'Terjadi kesalahan saat menyimpan transaksi');
       }
+      // -----------------------------------------------------------
+
     } catch (error) {
       console.error('Error creating transaction:', error);
+      alert('Gagal menghubungi server');
     }
   };
 
